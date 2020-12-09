@@ -1,0 +1,27 @@
+
+<!--NgModule (AppModule) = FormsModule + HttpModule + CustomModule-->
+<!-- components -> self contained objects (TS + HTML +CSS) -->
+<!-- Directives ->special instructions given to app on how content has to be delivered-->  
+<!-- pipes Transformational mechanism Eg currency or uppercase--> 
+<!-- Injectables -. common link of components or services ->singleton objects--> 
+
+<h2> Demo on Employee Application</h2>   
+<hr>
+  <!--<app-calc></app-calc>-->
+ <!--<app-emp> </app-emp>-->
+ <!-- <app-emp-manager> </app-emp-manager>  -->
+ <!-- <app-service-client></app-service-client> -->
+ <!-- <app-emp-service-client></app-emp-service-client> --> <!--json details -->  
+ 
+  <nav> 
+   <button [routerLink]= "['']"> Home</button>
+   <button [routerLink]= "['/calc']"> Calculator </button> 
+   <button [routerLink]= "['/all']"> All Employee</button> 
+   <button [routerLink]= "['/new']"> New Employee</button>
+   <button [routerLink]= "['/rest']"> Rest Client</button>  
+ </nav> 
+  <router-outlet>
+
+ </router-outlet> 
+ 
+

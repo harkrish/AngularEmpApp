@@ -1,0 +1,16 @@
+<div>
+    <h2> Math Calculation</h2>
+    <hr> 
+    <input type ="number" placeholder="First Value" [(ngModel)] = "firstValue"/> <!-- property binding [value] = "firstValue"-->
+    <select [(ngModel)] ="operand"> 
+        <option>---SELECT---</option>
+        <option>+</option> 
+        <option>-</option> 
+        <option>X</option>  
+        <option>/</option> 
+    </select>  
+    <input type ="number" placeholder="Second Value" [(ngModel)] = "secondValue"/> 
+    <button (click) = "onOperation()" > = </button>                      <!-- Event binding--> 
+                                                       <!-- property ,Event binding,interpolation ->1 way communication-->
+    <span> {{result}}</span>
+</div>

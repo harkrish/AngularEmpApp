@@ -1,0 +1,41 @@
+<h1> Employee Record System</h1> 
+<hr> 
+<div>
+<table border="1" width="50%"> 
+    <tr> 
+        <th> Employee Id</th>  
+        <th> Employee Name</th> 
+        <th> Employee Address</th> 
+        <th> Employee Salary</th> 
+        <th> Options</th> 
+    </tr> 
+    <tr *ngFor="let item of employees"> 
+        <td>{{item.id}}</td> 
+        <td>{{item.empName}}</td> 
+        <td>{{item.empAddress}}</td> 
+        <td>{{item.empSalary}}</td> 
+        <td> 
+            <a href="#" (click)="findEmp(item.id)"> Edit </a>  <!--  # for local -->
+            <a href="#" (click)="delete(item.id)"> Delete</a>
+        </td>
+    </tr>
+</table>
+</div> 
+<div *ngIf="currentEmployee">
+    <h2> Details of the selected Employee</h2> 
+    <hr> 
+    <p> The Id : <input [(ngModel)] = "currentEmployee.id"></p> <!--two way binding-->
+    <p> The Name : <input [(ngModel)] = "currentEmployee.empName"></p> 
+    <p> The Address : <input [(ngModel)] = "currentEmployee.empAddress"></p> 
+    <p> The Salary : <input [(ngModel)] = "currentEmployee.empSalary"></p>
+    <p> <button (click)= "saveChanges()">Save Changes</button></p>
+</div> 
+<div>
+    <h2> Details of the New Employee to Register</h2> 
+    <hr> 
+    <p> The Id : <input [(ngModel)] = "newEmp.id"></p> <!--two way binding-->
+    <p> The Name : <input [(ngModel)] = "newEmp.empName"></p> 
+    <p> The Address : <input [(ngModel)] = "newEmp.empAddress"></p> 
+    <p> The Salary : <input [(ngModel)] = "newEmp.empSalary"></p>
+    <p> <button (click)= "addEmployee()">Add Employee</button></p>
+</div>

@@ -1,0 +1,15 @@
+
+<h2> Employee Details of {{empObj.empName}}</h2>
+<hr> 
+
+<p> The Id : {{empObj.empId}}</p> <!--one way binding-->
+<p> The Name : {{empObj.empName}}</p> 
+<p> The Address : {{empObj.empAddress | uppercase}}</p> 
+<p> The Salary : {{empObj.empSalary | currency : 'USD'}}</p>
+
+<!-- Two way binding -->
+<!--              FormsModule                -->
+<!-- Html view        <->            data    -->
+<!--                ngModel           |      -->
+<!--                                  |      -->
+<!--                           component  (emp.component.ts) -->

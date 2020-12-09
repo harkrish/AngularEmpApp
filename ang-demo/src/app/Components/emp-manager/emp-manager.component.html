@@ -1,0 +1,28 @@
+<h2> List of Employees with Us</h2> 
+<hr> 
+<div> 
+    <div class = "row">
+        <input type ="search" [(ngModel)]="empSearch" placeholder="Search For Employee"/> 
+        <table border = "1" width="80%">
+            <!--<tr>
+                <th>Employee Id</th>
+                <th>Employee Name</th>
+                <th>Employee Address</th>
+                <th>Employee Salary</th>
+                <th>Options</th>
+            </tr>-->
+        
+        <tr *ngFor ="let emp of employees | empFilter : empSearch">
+           <!-- <td> {{emp.empId}}</td>
+            <td> {{emp.empName}}</td>
+            <td> {{emp.empAddress}}</td>
+            <td>{{emp.empSalary}}</td>
+            <td> <a href="#">Edit </a></td> -->
+            <app-emp [empObj] = emp></app-emp> <!-- property binding--> 
+        </tr>
+        </table>
+    </div> 
+    <div class = "row"> 
+       <app-new-emp (onAdd) = "addEmployee($event)"></app-new-emp> <!-- $ represents output of component-->
+    </div>
+</div>
