@@ -1,0 +1,9 @@
+Application -> Http methods <- REST service (created by JSP,Web API,SPRING,NODEJS,ASP.NET)
+(JSON,XML)             (GET,PUT,POST,DELETE) 
+
+service -> group of functions access the application  
+
+npm install -g json-server 
+json-server --watch db.json 
+http://localhost:3000/employees
+
